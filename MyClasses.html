@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="contents/mui/mui.min.css" rel="stylesheet" />
+    <link href="static/Menu.css" rel="stylesheet" />
+    <script src="contents/mui/mui.min.js"></script>
+    <script src="js/Libraries/jquery.min.js"></script>
+    <script src="contents/parse/parse-1.2.13.min.js"></script>
+    <script src="js/Controllers/ParseAuth.js"></script>
+    <link href="contents/toastr/toastr.min.css" rel="stylesheet" />
+    <script src="contents/toastr/toastr.min.js"></script>
+    <link href="contents/kendo/kendo.common.min.css" rel="stylesheet" />
+    <link href="contents/kendo/kendo.default.min.css" rel="stylesheet" />
+    <script src="contents/kendo/kendo.all.min.js"></script>
+    <script src="js/Helpers/GridHelper.js"></script>
+    <script src="static/script.js"></script>
+    <script src="js/Controllers/ParseAuth.js"></script>
+    <script src="js/Controllers/MyClasses.js"></script>
+    <script src="js/Controllers/Validators.js"></script>
+</head>
+<body>
+    <div id="sidedrawer" class="mui--no-user-select">
+        <div id="sidedrawer-brand" class="mui--appbar-line-height mui--text-title">Thought Sharing</div>
+        <div class="mui-divider"></div>
+        <ul>
+            <li>
+                <a href="#" style="cursor: pointer;text-decoration: none;"><strong>My Classes</strong></a>
+            </li>
+            <li>
+                <a href="AllClasses.html" style="cursor: pointer;text-decoration: none;"><strong>All Classes</strong></a>
+            </li>
+            <li id="btnSignOut">
+                <strong>SignOut</strong>
+            </li>
+        </ul>
+    </div>
+    <header id="header">
+        <div class="mui-appbar mui--appbar-line-height" style="background-color:#1ab188">
+            <div class="mui-container-fluid">
+                <a class="sidedrawer-toggle mui--visible-xs-inline-block js-show-sidedrawer">☰</a>
+                <a class="sidedrawer-toggle mui--hidden-xs js-hide-sidedrawer">☰</a>
+                <button class="mui--text-title mui--visible-xs-inline-block">Brand.io</button>
+            </div>
+        </div>
+    </header>
+    <div id="content-wrapper">
+        <div class="mui--appbar-height"></div>
+        <div class="mui-container-fluid">
+            <div id="example">
+                <div id="teacherGrid"></div>
+                <style>
+                    /*horizontal Grid scrollbar should appear if the browser window is shrinked too much*/
+                    #grid table {
+                        min-width: 1190px;
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
+    <div id="blockUser" style="visibility:hidden">
+        <div>
+            <input type="email" id="blockUserID" style="width:300px;" />
+            <button id="btnBlock">Block</button>
+            <button id="btnUnBlock">Un Block</button>
+        </div>
+    </div>
+</body>
+</html>

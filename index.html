@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="static/mui.min.css" rel="stylesheet" />
+    <link href="static/style.css" rel="stylesheet" type="text/css" />
+      <script src="contents/kendo/jquery.min.js"></script>
+      <script src="contents/mui/mui.min.js"></script>
+      <link href="contents/toastr/toastr.min.css" rel="stylesheet" />
+      <script src="contents/toastr/toastr.min.js"></script>
+      <script src="contents/parse/parse-1.2.13.min.js"></script>
+      <script src="js/Controllers/Login.js"></script>
+      <script src="js/Controllers/Validators.js"></script>
+      <style>
+          .vcenter {
+              display: inline-block;
+              vertical-align: middle;
+              float: none;
+          }
+
+          .loginContainer {
+          box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+          padding-bottom: 40px;
+          }
+      </style>
+  </head>
+  <body>
+    <header class="mui-appbar mui--z1" style="background-color:#1ab188">
+      <div class="mui-container">
+        <table width="100%">
+          <tr class="mui--appbar-height">
+            <td class="mui--text-title">Thought Sharing</td>
+          </tr>
+        </table>
+      </div>
+    </header>
+     
+<div id="Div1" class="mui--text-center">
+      <div class="mui--appbar-height"></div>
+      <br>
+      <br>
+      
+      <br>
+      <br>
+    </div>
+
+    <div id="content-wrapper" class="mui--text-center">
+       <div class="mui-col-md-5 vcenter loginContainer">
+      <form>
+        <legend>Login</legend>
+
+           <div class="mui-textfield mui-textfield--float-label" data-reactid=".0">
+               <input class="mui--is-empty mui--is-dirty" type="email" value="" placeholder="" data-reactid=".0.0" id="userName">
+               <label data-reactid=".0.1" style="transition: 0.15s ease-out;text-align:left;">Email</label>
+           </div>
+
+           <div class="mui-textfield mui-textfield--float-label" data-reactid=".0">
+               <input class="mui--is-empty mui--is-dirty" type="password" value="" placeholder="" data-reactid=".0.0" id="password">
+               <label data-reactid=".0.1" style="transition: 0.15s ease-out;text-align:left;">Password</label>
+           </div>
+
+        <div><button type="button" class="mui-btn mui-btn--raised" id="btnLogin">Login</button><button type="button" class="mui-btn mui-btn--primary" id="btnFacebook">Facebook  </button></div>
+        <a href="SignUp.html">New User..?</a>
+      </form>
+    </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+﻿<!doctype html>
+<html>
+  <head>
+      <title>Forum</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="contents/mui/mui.min.css" rel="stylesheet" />
+    <script src="contents/mui/mui.min.js"></script>
+    <link href="static/Menu.css" rel="stylesheet" />
+    <script src="contents/kendo/jquery.min.js"></script>
+    <script src="static/script.js"></script>
+      <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+      <link href="js/ForumWidget/css/reset.css" rel="stylesheet" />
+      <link href="contents/toastr/toastr.min.css" rel="stylesheet" />
+      <script src="contents/toastr/toastr.min.js"></script>
+      <link href="js/ForumWidget/css/style.css" rel="stylesheet" />
+      <script src="contents/parse/parse-1.2.13.min.js"></script>
+      <script src="js/Controllers/ParseAuth.js"></script>
+      <script src="js/Controllers/Forum.js"></script>
+    <script src="js/Controllers/Validators.js"></script>
+
+  </head>
+  <body>
+    <div id="sidedrawer" class="mui--no-user-select">
+      <div id="sidedrawer-brand" class="mui--appbar-line-height mui--text-title" style="color:black">Thought Sharing</div>
+      <div class="mui-divider"></div>
+        <ul id="menuContainer">
+            <li id="myClassMenu">
+                <a href="MyClasses.html" style="cursor: pointer;text-decoration: none;"><strong>My Classes</strong></a>
+            </li>
+            <li id="allClassMenu">
+                <a href="AllClasses.html" style="cursor: pointer;text-decoration: none;"><strong>All Classes</strong></a>
+            </li>        
+            <li id="btnSignOut" style="color:black">
+                <strong>SignOut</strong>
+            </li>
+        </ul>
+    </div>
+    <header id="header">
+      <div class="mui-appbar mui--appbar-line-height" style="background-color:#1ab188">
+        <div class="mui-container-fluid">
+          <a class="sidedrawer-toggle mui--visible-xs-inline-block js-show-sidedrawer">☰</a>
+          <a class="sidedrawer-toggle mui--hidden-xs js-hide-sidedrawer">☰</a>
+          <span class="mui--text-title mui--visible-xs-inline-block">Brand.io</span>
+        </div>
+      </div>
+    </header>
+    <div id="content-wrapper">
+      <div class="mui--appbar-height" style="height:32px;"></div>
+        <div class="container clearfix">
+            
+
+            <div class="chat">
+                <div class="chat-header clearfix">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg" alt="avatar" />
+
+                    <div class="chat-about">
+                        <div class="chat-with" id="forumOwner"></div>
+                        <a id="mainThought" style="font-family: Arial;font-size: 12pt;cursor: pointer;text-decoration: none;"></a>&nbsp &nbsp <span style="opacity:0.3"> (Click here to view the class description)</span>
+                        <!--<div class="chat-num-messages">already 1 902 messages</div>-->
+                    </div>
+                    
+                    <i class="fa fa-star"></i>
+                </div> <!-- end chat-header -->
+                <div class="chat-history" style="height:250px;">
+                    <ul id="chatHistory" style="height:250px;">
+                        <li>                            
+                            <i class="fa fa-circle online"></i>
+                            <i class="fa fa-circle online" style="color: #AED2A6"></i>
+                            <i class="fa fa-circle online" style="color:#DAE9DA"></i>
+                        </li>
+
+                    </ul>
+
+                </div> <!-- end chat-history -->
+                <div class="chat-message clearfix" style="width: 1035px;background-color: #F2F5F8;border-radius: 0px 0px 5px 5px;">
+                    <textarea name="messageToSend" id="messageToSend" placeholder="Type your message" rows="3"></textarea>
+
+                   <a style="font-family: Arial;font-size: 12pt;cursor: pointer;" id="btnLike">Like</a>
+
+                    <button id="btnSend">Send</button>
+                </div> <!-- end chat-message -->
+            </div> <!-- end chat -->
+
+        </div> <!-- end container -->
+        <script id="message-template" type="text/x-handlebars-template">
+            <li class="clearfix">
+                <div class="message-data align-right">
+                    <span class="message-data-time">{{time}}, Today</span> &nbsp; &nbsp;
+                    <span class="message-data-name">Olia</span> <i class="fa fa-circle me"></i>
+                </div>
+                <div class="message other-message float-right">
+                    {{messageOutput}}
+                </div>
+            </li>
+        </script>
+        <script id="message-response-template" type="text/x-handlebars-template">
+            <li>
+                <div class="message-data">
+                    <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+                    <span class="message-data-time">{{time}}, Today</span>
+                </div>
+                <div class="message my-message">
+                    {{response}}
+                </div>
+            </li>
+        </script>
+    </div>
+  </body>
+</html>

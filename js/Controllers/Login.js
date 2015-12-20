@@ -49,7 +49,7 @@
     window.fbAsyncInit = function () {
         // init the FB JS SDK
         Parse.FacebookUtils.init({
-            appId: '1532730107042645',                        // App ID from the app dashboard
+            appId: '1518740878426195',                        // App ID from the app dashboard
             channelUrl: '//localhost:1256/index.html', // Channel File
             status: false,                                 // Check Facebook Login status
             xfbml: true,                                  // Look for social plugins on the page
